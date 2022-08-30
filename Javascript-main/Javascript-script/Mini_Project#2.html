@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project #2</title>
+</head>
+<body>
+    <p>
+        This is your link: <span id="text"></span>
+    </p>
+
+
+    <script>
+        var url = prompt("Enter your URL")
+        if (url == "null") {
+            console.error("Something Missing.")
+        }
+        else {
+        if(url.substr(0, 4) != "htpp") {
+            url = "htpp://" + url
+        }
+            var link = document.getElementById("text")
+            var html = "<a href '" + url + "''>" + url + "</a>"
+            link.innerHTML = html;
+        }
+    </script>
+  
+    
+</body>
+</html>

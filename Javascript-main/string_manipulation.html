@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Manipulation</title>
+</head>
+<body>
+    <h1 id="sentence">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus maxime deserunt voluptate fugiat vel! Maiores in libero velit tempora voluptatem sint exercitationem ab aut rem unde. Perspiciatis culpa ab aspernatur vitae ut soluta id voluptatibus ipsa sint eligendi. Accusantium eum perspiciatis cumque vero voluptate optio totam impedit quasi corporis est.</h1>
+
+
+    <script>
+        var sentencenote = document.getElementById("sentence")
+        var sentence = sentencenote.innerText
+
+        var uppercase = sentence.toUpperCase()
+        var lowercase = sentence.toLowerCase()
+        var firstTenChars = sentence.substr(0, 10)
+
+        var allWorld = sentence.split(" ")
+        var bracketWords = "(" + allWorld.join(")(") + ")"
+
+        var firstFiveWords = allWorld.slice(0, 5)
+
+        var middleWords = allWorld.slice(0, 10)
+        var makeSentence = middleWords.join(" ")
+
+        sentencenote.innerText = makeSentence
+    </script>
+    
+
+
+
+
+
+</body>
+</html>

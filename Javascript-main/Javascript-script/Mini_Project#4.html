@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project #4</title>
+</head>
+<body>
+    <script>
+        function bill(totalbill, tip="10", totaltiponly=false) {
+            tip = tip / 100 ;
+            var totaltip = totalbill * tip ;
+            var finalbill = totalbill + totaltip ;
+            if(totaltiponly) {
+                return totaltip;
+            }
+            return finalbill;
+        }
+        var yourtip = bill(2500, 10, true); console.log(yourtip)
+        var yourbill = bill(2500, 10); console.log(yourbill)
+    </script>
+    
+</body>
+</html>

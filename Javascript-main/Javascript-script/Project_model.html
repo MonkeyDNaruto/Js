@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Model</title>
+    <style>
+        .modal{
+            background-color: white;
+            border: 1px solid black;
+            height: 150px;
+            padding: 50px;
+            width: 50%;
+            display: none;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <button class="js-open-btn">Open Modal</button>
+
+    <div class="modal js-modal">
+        <h1>This is Modal</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat eius quas ullam suscipit alias aliquam et voluptatem illo qui eaque ad assumenda eligendi corrupti fugiat voluptate, tenetur nam exercitationem sed dolores perspiciatis praesentium pariatur voluptas totam? Odio, officiis magni fugiat dolorum beatae accusantium, cum molestiae tenetur molestias similique, adipisci alias!
+
+        </p>
+        <p>
+            <button class="js-close-btn">Close Model</button>
+        </p>
+    </div>
+
+    <script>
+        class Modal{
+            constructor(){
+                this.modal = document.querySelector(".js-modal")
+            }
+            openModal(){
+                this.modal.style.display = "initial"
+
+            }
+            closeModal(){
+                this.modal.style.display = "none"
+            }
+        }
+        const openBTN = document.querySelector(".js-open-btn")
+        const closeBTN = document.querySelector(".js-close-btn")
+        const modal = new Modal()
+        
+        openBTN.addEventListener('click', function(event) {
+            modal.openModal()
+        })
+
+        closeBTN.addEventListener('click', function(event) {
+            modal.closeModal()
+        })
+    </script>
+    
+</body>
+</html>

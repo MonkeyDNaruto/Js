@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <h1>Tip Calculator</h1>
+
+    <div>
+        <label for="billamount">Bill Amount (In dollars)    </label>
+        <input type="number" id="billamount" placeholder="25">
+    </div>
+    <div>
+        <label for="tipamount">Tip Amount (in a%)  </label>
+        <input type="number" id="tipamount" placeholder="10">
+    </div>
+    <div>
+        <button class="btn" onClick="calculate()">Total tips and Bills</button>
+    </div>
+    
+    <div>
+        <div class="totaltip"></div>
+        <div class="totalbills-with-tip"></div>
+    </div>
+
+
+    <script>
+        function calculate() {
+           var totalBill = Number(document.getElementById("billamount").value)
+           var tipAmount = document.getElementById("tipamount")
+               tipAmount = Number(tipAmount.value)
+               tipAmount = tipAmount / 100 
+            
+           var totalTip = totalBill * tipAmount
+           var tiphtml = "<h3>Total-Tips: <small>$" + totalTip + "</small></h3>" 
+           document.querySelector(".totaltip").innerHTML = tiphtml
+           
+           var totalBills = totalBill + totalTip
+           var billhtml = "<h3>Total-Bills: <small>$" + totalBills + "</small></h3>"
+           document.querySelector(".totalbills-with-tip").innerHTML = billhtml
+
+        }
+    </script>
+
+    
+</body>
+</html>
